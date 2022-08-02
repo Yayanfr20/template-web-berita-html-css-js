@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandeglang News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ========== start header ========== -->
+    <header>
+        <!-- title -->
+        <div class="head">
+            <section>
+                <h1 class="title">Pandeglang <span style="color: greenyellow;">News</span></h1>
+            </section>
+            <section style="display: flex;">
+                <p style="padding: 10px;">selasa, 2 agustus 2022</p>
+
+                <button  class="cari" id="btn-cari" onclick="search();">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                    </button>
+                    <button class="cari" style="display:none ;" id="closeSearch" onclick="closeSearch();">X</button>
+                    
+            </section> 
+
+            <form action=""  id="search" style="display: none;">
+                <input type="text" class="input" placeholder="   cari">
+                <button type="submit" style="border: none; padding: 10px;background-color: #FFFFFF;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                    </button>
+            </form>
+            
+        </div>
+
+        <!-- navbar-desktop -->
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="" class="link">News</a>
+                </li>
+                <li>
+                    <a href="" class="link">Cemas</a>
+                </li>
+                <li>
+                    <a href="" class="link">Olahraga</a>
+                </li>
+                <li>
+                    <a href="" class="link">Lifestyle</a>
+                </li>
+                <li>
+                    <a href="" class="link">Entertaiment</a>
+                </li>
+                <li>
+                    <a href="" class="link">Otomotif</a>
+                </li>
+                <li>
+                    <a href="" class="link">Tekno</a>
+                </li>
+                <li>
+                    <a href="" class="link">Healt</a>
+                </li>
+                <li>
+                    <a href="" class="link">Food & Travel</a>
+                </li>
+            </ul>
+        </nav>
+<div style="background-color: blue; width:100%;height: 40px;" class="bg-nav-mobile">
+    <div style="display: flex; justify-content: space-between;">
+        <div>
+            <button class="btn-nav" id="btn-nav" onclick="viewNavMobile();">=</button>
+            <button class="btn-nav" id="btn-close" onclick="closeNavMobile();" style="display: none;">X</button>
+        </div>
+        <div>
+            <button  class="cari-mobile" id="btn-cari-mobile" onclick="searchMobile();">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+                </button>
+                <button class="cari-mobile" style="display:none ;" id="closeSearchMobile" onclick="closeSearchMobile();">X</button>
+        </div>
+        <form action=""  id="search-mobile" style="display: none;">
+            <input type="text" class="input" placeholder="    cari">
+            <button type="submit" style="border: none; padding: 10px;background-color: #FFFFFF;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+                </button>
+        </form>
+    </div>
+
+</div>
+
+        
+         <!-- navbar-mobile -->
+         <nav class="nav-mobile" id="nav-mobile">
+            <ul  style="list-style: none;">
+                <li>
+                    <a href="" class="link-mobile">News</a>
+                </li>
+                <li>
+                    <a href="" class="link-mobile">Cemas</a>
+                </li>
+                <li>
+                    <a href="" class="link-mobile">Olahraga</a>
+                </li>
+                <li>
+                    <a href="" class="link-mobile">Lifestyle</a>
+                </li>
+                <li>
+                    <a href="" class="link-mobile">Entertaiment</a>
+                </li>
+                <li>
+                    <a href="" class="link-mobile">Otomotif</a>
+                </li>
+                <li>
+                    <a href="" class="link-mobile">Tekno</a>
+                </li>
+                <li>
+                    <a href="" class="link-mobile">Healt</a>
+                </li>
+                <li>
+                    <a href="" class="link-mobile">Food & travel</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ========== end header ========== -->
+
+    <!-- ========== start content ========= -->
+    <div class="content">
+        <div class="terkini" style="background-image: url(img/terkini.jpg);">
+        <a href="" class="Kategori">News</a>
+        <a href="" class="link" style="padding: 5px;">
+        <h2>
+            Terdesak Kebutuhan Ekonomi, Ibu Muda Ini Nekat Curi Motor
+        </h2>
+        </a>
+        <br>
+        <p style="color: #FFFFFF; padding: 10px;">26 Juli 2022, 19:51 WIB</p>
+        </div>
+        <div class="news">
+            <!-- ==== -->
+            <div class="card">
+                <img src="img/news1.jpg" alt="" width="100%" height="70%">
+                <a href="" class="linknews">
+                <h3 style="text-align: left; padding: 5px;">DPW GEMA  MA Banten Gelar Pengajian 1 Muharram, KH.lili; </h3>
+                </a>
+            </div>
+            <!-- ==== -->
+            <div class="card">
+                <img src="img/news2.jpg" alt="" width="100%" height="70%">
+                <a href="" class="linknews">
+                <h3 style="text-align: left; padding: 5px;">Staycation Seru di Greenotel Cilegon Bareng Keluarga, Ada</h3>
+                </a>
+            </div>
+            <!-- === -->
+            <div class="card">
+                <img src="img/news3.jpg" alt="" width="100%" height="70%">
+                <a href="" class="linknews">
+                <h3 style="text-align: left; padding: 5px;">DPW GEMA  MA Banten Gelar Pengajian 1 Muharram, KH.lili; </h3>
+                </a>
+            </div>
+            <!-- === -->
+            <div class="card">
+                <img src="img/news4.jpg" alt="" width="100%" height="70%">
+                <a href="" class="linknews">
+                <h3 style="text-align: left; padding: 5px;">DPW GEMA  MA Banten Gelar Pengajian 1 Muharram, KH.lili; </h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- ========== end content ========= -->
+
+    <script src="script.js"></script>
+</body>
+</html>
