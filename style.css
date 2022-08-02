@@ -157,10 +157,14 @@ body {
     text-decoration: none;
     color: white;
     background-color: blue;
-    padding: 10px;
+    padding: 7px;
     border-radius: 3px;
     margin-top: 25%;
     margin-left: 10px;
+}
+
+.Kategori:hover {
+    color: greenyellow;
 }
 
 
@@ -183,6 +187,20 @@ body {
 .card {
     height: 100%;
     width: 25%;
+}
+
+.counterbaik {
+    background-color: #173664;
+    color: white;
+    margin: 20px 10%;
+}
+
+.terbaik {
+    width: 80%;
+    height: auto;
+    margin: 20px 10%;
+    display: flex;
+    justify-content: space-around;
 }
 
 
@@ -237,9 +255,14 @@ body {
     }
 
     .card {
-        width: 100%;
+        width: 80%;
         margin-top: 25px;
         margin-bottom: 25px;
+    }
+
+    .terbaik {
+        display: block;
+        width: 100%;
     }
     
 }
