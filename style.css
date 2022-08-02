@@ -216,6 +216,10 @@ body {
         display: none;
     }
 
+    .content {
+        box-shadow: none;
+    }
+
     .terkini {
         width: 100%;
         margin: 0;
@@ -224,6 +228,18 @@ body {
 
     .Kategori {
         margin-top: 30%;
+    }
+
+    .news {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
     
 }
